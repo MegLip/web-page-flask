@@ -1,0 +1,11 @@
+h1 {
+    background: lightblue;
+  }
+  h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+  h2{
+    color:darkblue;
+    font-size: 30px;
+  }
