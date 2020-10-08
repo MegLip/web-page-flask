@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="pl">
-    <head>
-        <title>Contact</title>
-    </head>
-    <body>
-        <h2>Kontakt</h2>
-        <ul>
-            <li><strong>email:</strong> meg@python.pl</li>
-            <li><strong>telefon:</strong> +48 555 666 777</li>          
-          </ul>
-        <h2>Pytania? Pomysły? Sugestie?</h2>
-        <form>
-            <textarea placeholder="Zostaw wiadomość..."></textarea>
+{% extends "base.html" %}
+{% block content %}
+    <h2>Kontakt</h2>
+    <ul>
+        <li><strong>email:</strong> meg@python.pl</li>
+        <li><strong>telefon:</strong> +48 555 666 777</li>          
+    </ul>
+    <h2>Pytania? Pomysły? Sugestie?</h2>
+    <form>
+        <textarea placeholder="Zostaw wiadomość..."></textarea>
 		<button type="submit" formmethod="post">Send</button>  
-        </form>
-        <br>
-        
-    </body>
-</html>
+    </form>
+{% endblock %}   
