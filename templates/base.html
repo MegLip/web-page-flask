@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    {% block head %}
-        <meta charset="utf-8">
-        <title>Welcome</title>
-        <link rel="stylesheet" href="static/style.css">
-    {% endblock %}
-</head>
-<body>
-    <h1>Witaj na mojej stronie</h1>
-    <img src="https://miro.medium.com/max/665/1*_UY3pECP-TQm8TkS8QhErw.png" width=400px;>
-    <div id="content">{% block content %}{% endblock %}</div>
-</body>
+    <head>
+        {% block head %}
+            <meta charset="utf-8">
+            <title>Welcome</title>
+            <link rel="stylesheet" href="static/style.css">
+        {% endblock %}
+    </head>
+    <body>
+        <h1>Witaj na mojej stronie</h1>
+        <img src="https://miro.medium.com/max/665/1*_UY3pECP-TQm8TkS8QhErw.png" width=400px;>
+        <div id="content">{% block content %}{% endblock %}</div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </body>
 </html>
